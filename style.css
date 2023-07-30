@@ -1,0 +1,162 @@
+/*  '*' The asterisk is a universal selector, which means the styles specified within this block will apply to all elements on the page. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* where it represent 20px on the top and bottom,10% reprsent the left and right  */
+    padding:20px 10% ;
+    background:transparent;
+    display:flex;
+    /* justify content means it provides equal space in between the each element */
+    justify-content:space-between;
+    align-items:center;
+    /*If two positioned elements overlap without a z-index specified, the element positioned last in the HTML code will be shown on top.so, The z-index property specifies the stack order of an element. */
+    z-index:100;
+}
+
+.logo{
+    font-size: 25px;
+    color: #031540;
+    /* it is used to remove the underlined from the link  */
+    text-decoration: none;
+    /*  font-weight is used to control the thickness or boldness of the text characters. 
+    Font weight values can range from 100 (thin) to 900 (extra bold) in multiples of 100 */
+    font-weight: 700;
+}
+ .navbar a /* .navbar is the class name and a is the tag name.      */
+{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:35px ;
+    transition:0.3s;
+
+}
+/* hover is used when the user hovers over it with the mouse cursor.it changes it color to blue. */
+.navbar a:hover,
+.navbar a.active{
+color: #00abf0;
+}
+
+.home{
+    /* It 100vh means vertical height.here 100% of vertical height. for example 1vh represents 1% of vertical height. */
+   height: 100vh;
+   background-image: linear-gradient(-90deg,#031540 65%,#fff 35%); 
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   /* 0, represents the padding on the top and bottom of the element.
+   10%, represents the padding on the left and right sides of the element. */
+   padding: 0 10%;
+}
+.home-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:500px;
+    height:500px;
+    background:#031540;
+    border-radius: 50%;
+    border: 25px solid #fff;
+    outline: 25px solid #031540;
+    
+}
+.home-image img{
+    position: relative;
+    max-width: 470px;
+    bottom: 75px;
+}
+.home-content{
+    /* The max-width property is commonly used for responsive web design to ensure that elements do not become too wide on larger screens */
+    max-width: 600px;
+    color:#fff;
+    text-align: right;
+}
+.home-content h1{
+    font-size: 55px;
+    line-height: 1.2;
+}
+/* '.home-content h3' represents the attributes for h3 tag which present inside the home-content   */
+.home-content h3{
+    font-size: 40px;
+    color:transparent;
+    -webkit-text-stroke: 0px #fff;
+    background-image: linear-gradient(#00abf0,#00abf0);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -410px 0;
+    animation:animateText 6s linear infinite;
+    
+}
+
+@keyframes animateText{
+    0%,95%,100%{
+        background-position:-410px 0 ;
+    }
+    65%,85%{
+        background-position: 0 0;
+    }
+}
+
+.home-content p{
+    font-size: 16px;
+    margin-top: 20px;
+
+}
+.home-sci{
+    /* 25px, represents the margin on the top
+     0, represents the margin on the right and left sides
+     40px, represents the margin on the bottom */
+margin: 25px 0 40px;
+}
+
+.home-sci a{
+    /* the elements are present in the same line without space similar to flex. */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    /* solid represent border style which is a straight line. */
+    border:2px solid #fff;
+    text-decoration: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    /* here the 12px is assigned to all the anchor tag <a> */
+    margin-left: 12px;
+    transition: 0.5s;
+}
+.home-sci a:hover{
+    background: #00abf0;
+    color: #fff;
+    border-color:#00abf0 ;
+    /*Horizontal offset (first value): 0,Vertical offset (second value): 0,Blur radius (third value): 10px  */
+    box-shadow :0 0 10px  #00abf0;
+}
+.btn{
+    padding:12px 35px;
+    background: #00abf0;
+    border-radius: 40px;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #00abf0;
+    transition:0.5s;
+}
+.btn:hover{
+    box-shadow: none;
+}
